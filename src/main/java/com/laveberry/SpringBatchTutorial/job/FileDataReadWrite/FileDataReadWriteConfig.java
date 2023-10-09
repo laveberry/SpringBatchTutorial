@@ -29,7 +29,7 @@ import org.springframework.core.io.FileSystemResource;
 import java.util.List;
 
 /**
- * desc : 파일 읽고 쓰기
+ * desc : csv 파일 읽고 쓰기
  * run : --spring.batch.job.names=fileReadWriteJob
  */
 @Configuration
@@ -53,7 +53,6 @@ public class FileDataReadWriteConfig {
     public Step fileReadWriteStep(ItemReader playerItemReader
             , ItemProcessor playerItemProcessor
             , ItemWriter playerItemWriter) {
-        System.out.println("여기 들어옴???");
         return stepBuilderFactory.get("fileReadWriteStep")
                 .<Player, PlayerYears>chunk(5)
                 .reader(playerItemReader)
@@ -81,7 +80,7 @@ public class FileDataReadWriteConfig {
         lineAggregator.setDelimiter(","); //구분 기준
         lineAggregator.setFieldExtractor(fieldExtractor); //추출필드
 
-        FileSystemResource outputResource = new FileSystemResource("player_output.txt");
+        FileSystemResource outputResource = new FileSystemResource("players_output.txt");
 
         return new FlatFileItemWriterBuilder<PlayerYears>()
                 .name("playerItemWriter")
