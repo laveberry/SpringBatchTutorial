@@ -3,6 +3,7 @@ spring:
   batch:
     job:
       names: ${job.name:NONE}
+      enabled: false #프로젝트 실행시 job 파라미터 존재하더라도 배치를 통해 실행
     jdbc:
       initialize-schema: ALWAYS
   datasource:
