@@ -1,4 +1,4 @@
-package com.laveberry.SpringBatchTutorial.job.HelloWorld;
+package com.laveberry.SpringBatchTutorial;
 
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;

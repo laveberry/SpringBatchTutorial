@@ -1,5 +1,6 @@
 package com.laveberry.SpringBatchTutorial.job.HelloWorld;
 
+import com.laveberry.SpringBatchTutorial.SpringBatchTestConfig;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
@@ -11,8 +12,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 @RunWith(SpringRunner.class)
 @ActiveProfiles("test") //h2 기반 세팅
